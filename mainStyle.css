@@ -3,15 +3,20 @@ body{
     margin: 0;
     overflow: hidden;
 }
+
+*{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    user-select: none;
+}
+
 #content{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     height: 100vh;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: x-large;
 }
 
 #topicsBg, #learningBg{
@@ -36,23 +41,32 @@ body{
     bottom: 0;
 }
 
-h1{
-    transition: all 0.5s ease-in-out;
+button{
+    background: none;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-weight: bolder;
+    font-size: 2em;
+    transition: hover 0.5s ease-in-out, all 0.2s;
 }
 
-h1:hover{
+button:hover{
     cursor: pointer;
     scale: 1.2;
 }
 
-h1:hover + #learningBg{
+button:active{
+    scale: 0.9;
+}
+
+button:hover + #learningBg{
     scale: 1.2;
 }
 
-h1:first-of-type:hover ~ #topicsBg{
+button:first-of-type:hover ~ #topicsBg{
     scale: 1.2;
 }
-
 
 
 @media screen and (min-width: 768px) {
