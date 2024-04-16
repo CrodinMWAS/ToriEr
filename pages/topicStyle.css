@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    user-select: none;
+}
+
+nav{
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+nav button{
+    color: white;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    user-select: none;
+    margin-right: 50px;
+    margin-left: 10px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+nav button:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    scale: 1.2;
+}
+
+nav .active{
+    background-color: white;
+    color: black;
+    
+}
+
+#topics{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black;
+    gap: 25px;
+    background-color: #EAEAEA;
+    margin: 15px;
+}
+
+.topic{
+    color: #EAEAEA;
+    background-color: #212121;
+    transition: all 0.3s ease-in-out;
+    padding: 5%;
+}
+
+.topic h1{
+    font-size: x-large;
+}
+
+.topic:hover{
+    cursor: pointer;
+    scale: 0.9;
+}
+
+.topic:active{
+    scale: 1;
+}
+
+.unavailable{
+    filter: contrast(0.5);
+}
+
+.unavailable:hover{
+    cursor: not-allowed;
+    scale: 1;
+}
