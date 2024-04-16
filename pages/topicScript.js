@@ -1,3 +1,6 @@
+// document.getElementById("mainHeader").innerText = 
+console.log(location.pathname);
+
 for (let index = 1; index != 21; index++) {
     let div = document.createElement("div");
     div.classList += "topic";

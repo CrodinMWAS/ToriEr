@@ -63,11 +63,6 @@ nav .active{
 
 .topic:hover{
     cursor: pointer;
-    scale: 0.9;
-}
-
-.topic:active{
-    scale: 1;
 }
 
 .unavailable{
