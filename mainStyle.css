@@ -1,6 +1,7 @@
 body{
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 #content{
     display: flex;
@@ -22,6 +23,7 @@ body{
     background-position: center;
     background-size: cover;
     filter: contrast(0.5) blur(3px);
+    transition: all 0.5s ease-in-out;
 }
 
 #topicsBg{
@@ -43,9 +45,14 @@ h1:hover{
     scale: 1.2;
 }
 
-h1:first-of-type:hover #topicsBg{
-    background-color: red;
+h1:hover + #learningBg{
+    scale: 1.2;
 }
+
+h1:first-of-type:hover ~ #topicsBg{
+    scale: 1.2;
+}
+
 
 
 @media screen and (min-width: 768px) {
