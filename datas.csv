@@ -1,16 +1,16 @@
-tétel;esemény;dátum;kép
-tétel 3;I. ipari forradalom;1750 - 19.század közepe;elso_ipari_forradalom#3
-tétel 3;II. ipari forradalom;1871 - 1914;masodik_ipari_forradalom#3
-tétel 3;gõzgép(James Watt);1769;gozgep#3
-tétel 3;telefon(Alexander Graham Bell);1876;telefon#3
-tétel 3;szénszálas izzólámpa(Thomas Edison);1879;szenszalas_izzo#3
-tétel 9;Reformkor Magyarországon;1830 - 1848;reformkor#9
-tétel 9;Lánchíd építése;1842;lanchid#9
-tétel 9;Széchényi István élete;1791 - 1860;szechenyi_istvan#9
-tétel 9;Wesselényi Miklós élete;1796 - 1850;wesselenyi_miklos#9
-tétel 9;kaszinó alapítása Pesten;1827;kaszino_pesten#9
-tétel 18;mohácsi csata;1526. augusztus 29;mohacsi_csata#18
-tétel 18;I. Szulejmán uralkodása;1520 - 1566;szulejman#18
-tétel 18;II. Lajos uralkodása;1516 - 1526;masodik_lajos#18
-tétel 18;nándorfehérvári csata;1541. augusztus 29;nandorehervar#18
-tétel 18;váradi béke;1538;varadi_beke#18
+tétel;esemény;dátum;kép1;kép2;kép3
+[03] Az ipari forradalom hullámai és hatásai;I. ipari forradalom;1750 - 19.század közepe;#03_elso_ipari_forradalom.jpg;;
+[03] Az ipari forradalom hullámai és hatásai;II. ipari forradalom;1871 - 1914;#03_masodik_ipari_forradalom.jpg;;
+[03] Az ipari forradalom hullámai és hatásai;gõzgép(James Watt);1769;#03_gozgep.jpg;#03_james_watt.jpg;#03_gozgep_rajz.jpg
+[03] Az ipari forradalom hullámai és hatásai;telefon(Alexander Graham Bell);1876;#03_telefon.jpg;;
+[03] Az ipari forradalom hullámai és hatásai;szénszálas izzólámpa(Thomas Edison);1879;#03_szenszalas_izzo.jfif;;
+[09] A reformmozgalom kibontakozása;Reformkor Magyarországon;1830 - 1848;#09_reformkor.jpg;;
+[09] A reformmozgalom kibontakozása;Lánchíd építése;1842;#09_lanchid.jpg;#09_lanchid_oroszlan.jpg;#09_lanchid_tervrajz.jpg
+[09] A reformmozgalom kibontakozása;Széchényi István élete;1791 - 1860;#09_szechenyi_istvan.jpg;;
+[09] A reformmozgalom kibontakozása;Wesselényi Miklós élete;1796 - 1850;#09_wesselenyi_miklos.jpg;;
+[09] A reformmozgalom kibontakozása;kaszinó alapítása Pesten;1827;#09_kaszino_pesten.jpg;;
+[18] Az ország három részre szakadása;mohácsi csata;1526. augusztus 29;#18_mohacsi_csata.jpg;#18_ mohacsi_csata_konyv.jpg;#18_mohacsi_terkep.jfif
+[18] Az ország három részre szakadása;I. Szulejmán uralkodása;1520 - 1566;#18_szulejman.jpg;;
+[18] Az ország három részre szakadása;II. Lajos uralkodása;1516 - 1526;#18_masodik_lajos.jpg;;
+[18] Az ország három részre szakadása;nándorfehérvári csata;1541. augusztus 29;#18_nandorfehervar.jfif;;
+[18] Az ország három részre szakadása;váradi béke;1538;#18_varadi_beke.jfif;;

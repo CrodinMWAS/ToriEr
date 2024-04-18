@@ -49,7 +49,7 @@ function getRandomEventFromThesis(thesisNumber) {
         let correctDate = theses[thesisString].dates[randomNumber]
         let badResponses = []
 
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 4; i++) {
             let answ = getRandomDate();
             while (answ == correctDate) {
                 answ = getRandomDate()
@@ -57,8 +57,8 @@ function getRandomEventFromThesis(thesisNumber) {
             badResponses.push(answ)
         }
     
-        let response = [question, [correctDate, ...badResponses]]
-        console.log(response)
+        let response = [question, correctDate, badResponses]
+        return response;
     }   
 }
 
@@ -94,4 +94,32 @@ function navigator(btn) {
         localStorage.setItem("origin", "tanulni: ")
     }
     location.href = 'pages/topics.html'
+         let response = [date, correctEvent, badResponses]
+         return response;
+     }    
+
+function fillQuestions(reverseOrder) {
+    let resp;
+    if (reverseOrder) {
+        resp = getRandomDateFromThesis(3);
+    } else {
+        resp = getRandomEventFromThesis(3)
+    }
+    document.getElementById("event").innerHTML = resp[0];
+    document.getElementById("answers").innerHTML = "";
+    let randomNum = Math.floor(Math.random() * 4)
+    for (let i = 0; i < resp[2].length; i++) {
+        let answerDiv = document.createElement("div");
+        let answerH = document.createElement("h1");
+        answerH.innerHTML = resp[2][i];
+        answerDiv.append(answerH)
+        document.getElementById("answers").appendChild(answerDiv);
+        if (i == randomNum) {
+            answerDiv = document.createElement("div");
+            let answerH = document.createElement("h1");
+            answerH.innerHTML = resp[1];
+            answerDiv.append(answerH)
+            document.getElementById("answers").appendChild(answerDiv);
+        }
+    }
 }
