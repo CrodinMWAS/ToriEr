@@ -40,7 +40,29 @@ nav .active{
     
 }
 
-#topics{
+.quizNav{
+    background-color: #A41F13;
+}
+
+.quizNav button{
+    background-color: #A41F13;
+}
+
+.quizNav .active{
+    background-color: black;
+    color: white;
+}
+
+.quizNav button:hover{
+    background-color: black;
+    color: white;
+}
+
+#mainHeader{
+    padding: 15px;
+}
+
+#topics, #topicsQuiz{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -48,6 +70,11 @@ nav .active{
     gap: 25px;
     background-color: #EAEAEA;
     margin: 15px;
+    border-radius: 5px;
+}
+
+#topicsQuiz{
+    border-color: #A41F13;
 }
 
 .topic{
@@ -55,6 +82,7 @@ nav .active{
     background-color: #212121;
     transition: all 0.3s ease-in-out;
     padding: 5%;
+    text-align: center;
 }
 
 .topic h1{

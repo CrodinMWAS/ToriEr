@@ -1,12 +1,11 @@
-// document.getElementById("mainHeader").innerText = 
-console.log(location.pathname);
+document.getElementById("mainHeader").innerText = `Válassza ki melyik tételből szeretne ${localStorage.getItem("origin")}`
 
 for (let index = 1; index != 21; index++) {
     let div = document.createElement("div");
     div.classList += "topic";
     let h1 = document.createElement('h1');
     h1.innerText = `${index}. Tétel`
-    
+
     if (index == 3) {
         h1.innerText = `${index}. Tétel: Ipari Forradalom hullámai és hatásai`
     }else if (index == 9){
@@ -19,4 +18,12 @@ for (let index = 1; index != 21; index++) {
 
     div.appendChild(h1)
     document.getElementById("topics").appendChild(div);
+}
+
+if (localStorage.getItem("origin") == "tesztet kitölteni: ") {
+    document.getElementById("quizBtn").classList.add("active")
+    document.getElementById("topics").id = "topicsQuiz";
+    document.getElementsByTagName("nav")[0].classList.add("quizNav")
+}else if(localStorage.getItem("origin") == "tanulni: "){
+    document.getElementById("topicBtn").classList.add("active")
 }
