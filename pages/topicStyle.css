@@ -60,6 +60,7 @@ nav .active{
 
 #mainHeader{
     padding: 15px;
+    text-align: center;
 }
 
 #topics, #topicsQuiz{
