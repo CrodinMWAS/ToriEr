@@ -47,6 +47,11 @@ nav .active{
     
 }
 
+#underline{
+    text-decoration: underline;
+    text-underline-offset: 5px; 
+}
+
 .quizNav{
     background-color: var(--greenColor);
 }
@@ -141,8 +146,3 @@ nav .active{
         font-size: x-large;
     }
   }
-
-  #underline{
-    text-decoration: underline;
-    text-underline-offset: 5px; 
-}
