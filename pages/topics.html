@@ -8,17 +8,13 @@
 </head>
 <body>
     <nav>
+        <button id="homeBtn" onclick="location.href='../index.html'">Home</button>
         <button id="topicBtn" onclick="localStorage.setItem('origin', 'tanulni: '); location.reload()">Tételek</button>
         <button id="quizBtn" onclick="localStorage.setItem('origin', 'tesztet kitölteni: '); location.reload()">Quiz</button>
     </nav>
     <main>
         <h1 id="mainHeader"></h1>
         <div id="topics">
-            <!-- <div class="topic">
-                <h1>
-                    18.Tétel: Az ország három részre szakadása
-                </h1>
-            </div>  -->
         </div>
     </main>
     <script src="topicScript.js"></script>
