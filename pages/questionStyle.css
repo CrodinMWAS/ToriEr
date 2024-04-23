@@ -1,11 +1,12 @@
 body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 *{
     user-select: none;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 #itemHolder{
@@ -15,5 +16,43 @@ body{
 }
 
 section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: red;
+    height: 50%;
+}
+
+h1{
+    margin: 0;
+}
+
+#event{
+    font-size: 40px;
+}
+
+#pic{
+    height: 100%;
+    width: 85%;
+}
+
+#answers{
+    justify-content: space-around;
+}
+
+button{
+    background: none;
+    border: none;
+    font-size: 25px;
+    padding: 5%;
+    transition: hover 0.5s ease-in-out, all 0.2s;
+}
+
+button:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+button:active{
+    scale: 0.9;
 }

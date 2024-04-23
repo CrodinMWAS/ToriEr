@@ -8,7 +8,6 @@
 body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 *{
@@ -75,7 +74,7 @@ nav .active{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    border: 5px solid var(--blueColor);
+    border: 7px solid var(--blueColor);
     gap: 25px;
     background-color: #EAEAEA;
     margin: 15px;
