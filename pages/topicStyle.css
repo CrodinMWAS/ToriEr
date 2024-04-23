@@ -1,6 +1,14 @@
+:root{
+    --greenColor: #6BA292;
+    --blueColor: #6184D8;
+    --greyColor: #50514F;
+    --blackColor: #212121;
+}
+
 body{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 *{
@@ -8,7 +16,7 @@ body{
 }
 
 nav{
-    background-color: black;
+    background-color: var(--blueColor);
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -16,7 +24,7 @@ nav{
 
 nav button{
     color: white;
-    background-color: black;
+    background-color: var(--blueColor);
     font-family: 'Courier New', Courier, monospace;
     font-size: x-large;
     user-select: none;
@@ -29,32 +37,32 @@ nav button{
 
 nav button:hover{
     background-color: white;
-    color: black;
+    color: var(--blackColor);
     cursor: pointer;
     scale: 1.2;
 }
 
 nav .active{
     background-color: white;
-    color: black;
+    color: var(--blackColor);
     
 }
 
 .quizNav{
-    background-color: #A41F13;
+    background-color: var(--greenColor);
 }
 
 .quizNav button{
-    background-color: #A41F13;
+    background-color: var(--greenColor);
 }
 
 .quizNav .active{
-    background-color: black;
+    background-color: var(--blackColor);
     color: white;
 }
 
 .quizNav button:hover{
-    background-color: black;
+    background-color: var(--blackColor);
     color: white;
 }
 
@@ -67,7 +75,7 @@ nav .active{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    border: 5px solid black;
+    border: 5px solid var(--blueColor);
     gap: 25px;
     background-color: #EAEAEA;
     margin: 15px;
@@ -75,12 +83,12 @@ nav .active{
 }
 
 #topicsQuiz{
-    border-color: #A41F13;
+    border-color: var(--greenColor);
 }
 
 .topic{
     color: #EAEAEA;
-    background-color: #212121;
+    background-color: var(--blackColor);
     transition: all 0.3s ease-in-out;
     padding: 5%;
     text-align: center;
@@ -101,4 +109,41 @@ nav .active{
 .unavailable:hover{
     cursor: not-allowed;
     scale: 1;
+}
+
+@media screen and (min-width: 768px) {
+    nav{
+        padding: 2% 3.5%;
+    }
+    nav button{
+        padding: 1% 2%;
+        font-size: xx-large;
+    }
+    h1{
+        font-size: xx-large;
+    }
+    #topics, #topicsQuiz{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        border-width: 15px 0;
+    }
+    .topic{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc((100% - 50px) / 3);
+        height: 500px;
+        padding: 0;
+    }
+    .topic h1{
+        padding: 0;
+        margin: 5%;
+        font-size: x-large;
+    }
+  }
+
+  #underline{
+    text-decoration: underline;
+    text-underline-offset: 5px; 
 }

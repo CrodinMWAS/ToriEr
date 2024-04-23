@@ -1,7 +1,9 @@
-document.getElementById("mainHeader").innerText = `Válassza ki melyik tételből szeretne ${localStorage.getItem("origin")}`
+let header = document.getElementById("mainHeader");
+header.innerHTML = `Válassza ki melyik tételből szeretne <span id="underline"> ${localStorage.getItem("origin")} </span>`
 
 function quizSelector(index) {
-    console.log("asd")
+    localStorage.setItem("selectedTopic", index)
+    location.href = 'question.html'
 }
 
 for (let index = 1; index != 21; index++) {
@@ -37,6 +39,8 @@ if (localStorage.getItem("origin") == "tesztet kitölteni: ") {
     document.getElementById("quizBtn").classList.add("active")
     document.getElementById("topics").id = "topicsQuiz";
     document.getElementsByTagName("nav")[0].classList.add("quizNav")
+    document.getElementById("underline").style.textDecorationColor = "#6BA292";
 }else if(localStorage.getItem("origin") == "tanulni: "){
     document.getElementById("topicBtn").classList.add("active")
+    document.getElementById("underline").style.textDecorationColor = "#6184D8";
 }
