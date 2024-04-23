@@ -27,6 +27,37 @@ let theses = {
     "thesis18" : thesis18
 }
 
+function convertInput(csvLine) {
+    let splitLines = csvLine.split(";")
+    let thesisNum = splitLines[0].substr(1, 2)
+    let thesisTitle = splitLines[0].substr(5)
+    let event = splitLines[1]
+    let date = splitLines[2]
+    let images = []
+    for (let i = 0; i < 3; i++) {
+        if (splitLines[i + 3] != "") {
+            images.push(splitLines[i + 3])
+        }
+    }
+
+    let thesisString = "thesis" + thesisNum.toString();
+
+    if (theses.hasOwnProperty(thesisString)) {
+        theses[thesisString] == {
+            "title" : thesisTitle,
+            "events": event,
+            "dates": date,
+            "images": images
+        }
+    } else {
+        theses[thesisString][events].append(event)
+        theses[thesisString][dates].append(date)
+        theses[thesisString][images].append(image)
+    }
+
+    console.log(theses)
+}
+
 function getRandomDate() {
     let randomNum = Math.floor(Math.random() * theses.validNumbers.length)
     let thesisString = "thesis" + String(theses.validNumbers[randomNum])
@@ -84,6 +115,7 @@ function getRandomDateFromThesis(thesisNumber) {
      }    
 }
 
+let answers = []
 
 function fillQuestions(reverseOrder, thesisNum) {
     let resp;
@@ -99,13 +131,49 @@ function fillQuestions(reverseOrder, thesisNum) {
     for (let i = 0; i < resp[2].length; i++) {
         let answerH = document.createElement("button");
         answerH.innerHTML = resp[2][i];
+        answerH.addEventListener('click',()=>{
+            addAnswer(false,resp[2][i], resp[1])
+        })
         document.getElementById("answers").appendChild(answerH);
         if (i == randomNum) {
             let answerH = document.createElement("button");
             answerH.innerHTML = resp[1];
+            answerH.addEventListener('click',()=>{
+                addAnswer(true, resp[1], "")
+            })
             document.getElementById("answers").appendChild(answerH);
         }
     }
+}
+
+let counter = 0
+function addAnswer(isCorrect, selectedByUser, Correct) {
+    if (counter == 5) {
+        countAnswers();
+        return
+    }
+
+    if (isCorrect) {
+        answers.push(selectedByUser)
+    }else{
+        answers.push([selectedByUser, Correct])
+    }
+    console.log(answers)
+    fillQuestions(false,parseInt(localStorage.getItem("selectedTopic")))
+    counter++;
+}
+
+function countAnswers() {
+    let wrongAnswers = 0
+    answers.forEach(element => {
+        if (typeof(element) == "object") {
+            wrongAnswers++;
+        }
+    });
+    console.log(answers)
+    console.log(wrongAnswers)
+    alert(`5 ből ${wrongAnswers}-t nem találtál el.`)
+    location.reload();
 }
 
 fillQuestions(false,parseInt(localStorage.getItem("selectedTopic")))
